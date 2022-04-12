@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         });
 
         dialog = new ProgressDialog(this);
-        dialog.setTitle("Fetching news articles...");
+        dialog.setTitle("กำลังโหลดข้อมูลข่าวสาร...");
         dialog.show();
 
         b1 = findViewById(R.id.btn_1);
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         @Override
         public void onFetchData(List<NewsHeadlines> list, String message) {
             if (list.isEmpty()) {
-                Toast.makeText(MainActivity.this, "No data found!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "ไม่พบข่าวสาร!!!", Toast.LENGTH_SHORT).show();
             }else {
                 showNews(list);
                 dialog.dismiss();
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
 
         @Override
         public void onError(String message) {
-            Toast.makeText(MainActivity.this, "An Error Occurred!!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "เกิดข้อผิดพลาด!!!", Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     public void onClick(View v) {
         Button button = (Button) v;
         String category = button.getText().toString();
-        dialog.setTitle("Fetching news articles of" + category);
+        dialog.setTitle("กำลังโหลดข้อมูลข่าวสารเกี่ยวกับ " + category);
         dialog.show();
         RequestManger manager = new RequestManger(this);
         manager.getNewsHeadlines(listener, category, null);

@@ -1,7 +1,7 @@
 # News-Application
 แอปพลิเคชันดูข่าวสารประเทศไทย
 
-#Android Studio (Java) -  วิธีการสร้างแอปพลิเคชันข่าวไทย News App [Tutorial]
+# Android Studio (Java) -  วิธีการสร้างแอปพลิเคชันข่าวไทย News App [Tutorial]
 https://youtu.be/tifCpoBvffM
 
 [<img src="https://www.img.in.th/images/da30fdc7ff627463758d94a795f985bf.jpg">]()
